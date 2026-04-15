@@ -1,70 +1,109 @@
-# 📒 Soroban Todo Notes Smart Contract
+# ⭐ Soroban Rating Smart Contract
 
 ## 📖 Description
 
-This project is a decentralized Todo Notes application built using Soroban Smart Contracts on the Stellar network.
+This project is a decentralized Rating Application built using Soroban Smart Contracts on the Stellar network.
 
-Users can create, view, and manage notes directly on-chain. Each note includes a title, content, and completion status.
+The application allows users to submit ratings (1–5 stars) along with comments. All data is stored on-chain, ensuring transparency and immutability.
 
 ---
 
 ## 🚀 Features
 
-* Create new notes
-* View all stored notes
-* Delete notes
-* Mark notes as completed / uncompleted
-* Fully stored on blockchain (Soroban)
+* ⭐ Add rating (1–5)
+* 💬 Add comment to rating
+* 📋 View all ratings
+* ❌ Delete rating
+* 🔗 Fully stored on blockchain (Soroban)
+
+---
+
+## 🧠 Data Structure
+
+Each rating contains:
+
+* `id`: Unique identifier
+* `score`: Rating value (1–5)
+* `comment`: User comment
 
 ---
 
 ## 🛠️ Technologies Used
 
-* Rust (Soroban SDK)
-* Stellar Soroban Smart Contract
-* WASM (WebAssembly)
+* Rust
+* Soroban SDK
+* Stellar Network
+* WebAssembly (WASM)
 
 ---
 
 ## 📦 Smart Contract ID (Testnet)
 
 ```
-PASTE YOUR CONTRACT ID HERE
+PASTE_YOUR_CONTRACT_ID_HERE
 ```
 
 ---
 
-## 🖼️ Screenshot (Testnet Interaction)
+## 🖼️ Screenshots
 
-(Add screenshots here showing contract interaction on testnet)
+### 📌 Deploy Contract
+
+(Add screenshot showing contract deployment with Contract ID)
+
+### 📌 Add Rating
+
+(Add screenshot of invoking `add_rating` function)
+
+### 📌 Get Ratings
+
+(Add screenshot of invoking `get_ratings` function)
 
 ---
 
-## ⚙️ How to Run
+## ⚙️ How It Works
 
-### 1. Build Contract
+1. User submits a rating (1–5) with a comment
+2. The data is stored on-chain using Soroban storage
+3. Users can retrieve all ratings
+4. Users can delete a rating by ID
 
-```bash
-cargo build --target wasm32-unknown-unknown --release
+---
+
+## ▶️ Example Usage
+
+### Add Rating
+
+```
+Function: add_rating
+score: 5
+comment: "Great application!"
 ```
 
-### 2. Deploy to Testnet
+### Get Ratings
 
-```bash
-soroban contract deploy \
---wasm target/wasm32-unknown-unknown/release/notes.wasm \
---source YOUR_ACCOUNT \
---network testnet
+```
+Function: get_ratings
+```
+
+### Delete Rating
+
+```
+Function: delete_rating
+id: 1
 ```
 
 ---
 
 ## 📌 Notes
 
-This project was created as part of a Soroban Smart Contract workshop submission.
+* Rating value is restricted between 1 and 5
+* All data is permanently stored on blockchain
+* This project was developed as part of a Soroban Smart Contract workshop submission
 
 ---
 
 ## 👤 Author
 
-Your Name
+* Name: Your Name
+* GitHub: Your GitHub Profile
